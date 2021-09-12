@@ -5,12 +5,15 @@ public class Filmes {
     private String estilo;
     private String diretor;
     private Integer ano;
+    private boolean visto;
+    private boolean assistido;
 
-    public Filmes(String titulo, String estilo, String diretor, Integer ano) {
+    public Filmes(String titulo, String estilo, String diretor, Integer ano, boolean visto) {
         this.titulo = titulo;
         this.estilo = estilo;
         this.diretor = diretor;
         this.ano = ano;
+        this.visto = visto;
     }
 
     public String getTitulo() {

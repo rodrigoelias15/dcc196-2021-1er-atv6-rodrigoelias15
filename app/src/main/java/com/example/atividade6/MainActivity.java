@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         filmes = new ArrayList<Filmes>(){{
-            add(new Filmes("Matrix", "Ficção Científica", "Lana Wachowski, Lilly Wachowski", 1999));
-            add(new Filmes("2012", "Ficção Científica", "Roland Emmerich", 2009));
-            add(new Filmes("O Silêncio dos Inocentes", "Terror/Suspense", "Jonathan Demme", 1991));
-            add(new Filmes("A Máscara do Zorro", "Ação/Aventura", "Martin Campbell", 1998));
-            add(new Filmes("Jolt", "Ação/Comédia", "Tanya Wexler", 2021));
-            add(new Filmes("Donnie Darko", "Ficção Científica/Fantasia", " Richard Kelly", 2001));
+            add(new Filmes("Matrix", "Ficção Científica", "Lana Wachowski, Lilly Wachowski", 1999, true));
+            add(new Filmes("2012", "Ficção Científica", "Roland Emmerich", 2009, true));
+            add(new Filmes("O Silêncio dos Inocentes", "Terror/Suspense", "Jonathan Demme", 1991, true));
+            add(new Filmes("A Máscara do Zorro", "Ação/Aventura", "Martin Campbell", 1998, true));
+            add(new Filmes("Jolt", "Ação/Comédia", "Tanya Wexler", 2021, true));
+            add(new Filmes("Donnie Darko", "Ficção Científica/Fantasia", " Richard Kelly", 2001, true));
         }};
 
         layoutManager = new LinearLayoutManager(this);
