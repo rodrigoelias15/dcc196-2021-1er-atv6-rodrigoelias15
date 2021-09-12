@@ -1,6 +1,7 @@
 package com.example.atividade6;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -9,8 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    RecyclerView recyclerViewFilmes;
-    List<Filmes> filmes;
+    private RecyclerView recyclerViewFilmes;
+    private List<Filmes> filmes;
+    private LinearLayoutManager layoutManager;
+    private FilmesAdapter filmesAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +26,12 @@ public class MainActivity extends AppCompatActivity {
             add(new Filmes("A Máscara do Zorro", "Ação/Aventura", "Martin Campbell", 1998));
             add(new Filmes("Jolt", "Ação/Comédia", "Tanya Wexler", 2021));
             add(new Filmes("Donnie Darko", "Ficção Científica/Fantasia", " Richard Kelly", 2001));
-        }
+        }};
 
-        };
-
+        layoutManager = new LinearLayoutManager(this);
         recyclerViewFilmes = findViewById(R.id.recyclerViewFilmes);
+        recyclerViewFilmes.setLayoutManager(layoutManager);
+        filmesAdapter = new FilmesAdapter(filmes);
+        recyclerViewFilmes.setAdapter(filmesAdapter);
     }
 }
