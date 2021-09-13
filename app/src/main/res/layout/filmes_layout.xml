@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="16sp">
 
     <TextView
@@ -12,48 +12,51 @@
         android:layout_height="45dp"
         android:text="Titulo"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/textViewEstilo"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewDiretor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="61dp"
+        android:layout_height="23dp"
         android:layout_marginTop="16dp"
         android:text="Diretor"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/textViewEstilo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEstilo" />
+
+    <TextView
+        android:id="@+id/textViewEstilo"
+        android:layout_width="51dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Estilo"
+        android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="@+id/textViewTitulo"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
 
     <TextView
-        android:id="@+id/textViewEstilo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Estilo"
-        android:textSize="34sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textViewTitulo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textViewTitulo" />
-
-    <TextView
         android:id="@+id/textViewAno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="37dp"
+        android:layout_height="24dp"
         android:layout_marginTop="16dp"
         android:text="Ano"
-        app:layout_constraintEnd_toEndOf="@+id/textViewEstilo"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEstilo" />
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/textViewDiretor"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDiretor" />
 
     <TextView
         android:id="@+id/textViewVisto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="44dp"
+        android:layout_height="23dp"
         android:layout_marginTop="16dp"
         android:text="Visto"
-        app:layout_constraintStart_toStartOf="@+id/textViewDiretor"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDiretor" />
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/textViewAno"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAno" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
