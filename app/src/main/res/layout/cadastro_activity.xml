@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroActivity">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextCampoTitulo"
+        android:layout_width="164dp"
+        android:layout_height="24dp"
+        android:hint="hint"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCadastroTitulo"
+        app:layout_constraintStart_toEndOf="@+id/textViewCadastroTitulo" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextCampoDiretor"
+        android:layout_width="166dp"
+        android:layout_height="20dp"
+        android:hint="hint"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCadastroDiretor"
+        app:layout_constraintStart_toEndOf="@+id/textViewCadastroDiretor" />
+
+    <TextView
+        android:id="@+id/textViewCadastroTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCadastroVisto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Já assistiu?"
+        app:layout_constraintStart_toStartOf="@+id/textViewCadastroEstilo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroEstilo" />
+
+    <TextView
+        android:id="@+id/textViewCadastroAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ano"
+        app:layout_constraintStart_toStartOf="@+id/textViewCadastroDiretor"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroDiretor" />
+
+    <TextView
+        android:id="@+id/textViewCadastroDiretor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Diretor"
+        app:layout_constraintStart_toStartOf="@+id/textViewCadastroTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroTitulo" />
+
+    <TextView
+        android:id="@+id/textViewCadastroEstilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Estilo"
+        app:layout_constraintStart_toStartOf="@+id/textViewCadastroAno"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroAno" />
+
+    <EditText
+        android:id="@+id/editTextNumberCampoAno"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCadastroAno"
+        app:layout_constraintStart_toEndOf="@+id/textViewCadastroAno" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText"
+        android:layout_width="164dp"
+        android:layout_height="24dp"
+        android:hint="hint"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCadastroVisto"
+        app:layout_constraintStart_toEndOf="@+id/textViewCadastroVisto" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextCampoEstilo"
+        android:layout_width="164dp"
+        android:layout_height="24dp"
+        android:hint="hint"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCadastroEstilo"
+        app:layout_constraintStart_toEndOf="@+id/textViewCadastroEstilo" />
+
+    <Button
+        android:id="@+id/buttonVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCadastroFilme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroVisto"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <Button
+        android:id="@+id/buttonCadastroFilme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="Cadastrar Filme"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonVoltar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

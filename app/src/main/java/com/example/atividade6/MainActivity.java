@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,12 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayoutManager layoutManager;
     private FilmesAdapter filmesAdapter;
     private ItemTouchHelper.SimpleCallback touchHelper;
+
+    public void cadastroClick(View view){
+        Intent cadastroIntent = new Intent(getApplicationContext(), CadastroActivity.class);
+        startActivity(cadastroIntent);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
