@@ -1,6 +1,8 @@
 package com.example.atividade6;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Filmes> filmes;
     private LinearLayoutManager layoutManager;
     private FilmesAdapter filmesAdapter;
+    private ItemTouchHelper.SimpleCallback touchHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +36,19 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewFilmes.setLayoutManager(layoutManager);
         filmesAdapter = new FilmesAdapter(filmes);
         recyclerViewFilmes.setAdapter(filmesAdapter);
+
+        touchHelper = new ItemTouchHelper.SimpleCallback(ItemTouchHelper.ACTION_STATE_IDLE, ItemTouchHelper.RIGHT ) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                filmes.remove(viewHolder.getAdapterPosition());
+                filmesAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+            }
+        };
+        new ItemTouchHelper(touchHelper).attachToRecyclerView(recyclerViewFilmes);
     }
 }
