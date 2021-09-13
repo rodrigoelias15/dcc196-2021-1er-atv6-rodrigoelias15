@@ -35,7 +35,7 @@ public class FilmesAdapter extends RecyclerView.Adapter<FilmesAdapter.FilmesView
         holder.textViewEstilo.setText(filmes.get(position).getEstilo());
         holder.textViewDiretor.setText(filmes.get(position).getDiretor());
         holder.textViewAno.setText(filmes.get(position).getAno().toString());
-        holder.textViewVisto.setText(filmes.get(position).getAno().toString());
+        holder.textViewVisto.setText(filmes.get(position).getVisto());
     }
 
     @Override
